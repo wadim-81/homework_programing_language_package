@@ -1,4 +1,4 @@
-import java.time.LocalDate;
+import java.time.Instant;
 import java.time.LocalDateTime;
 
 public class Package {
@@ -6,7 +6,7 @@ public class Package {
 private String  cityFrom;
 private String cityTo;
 private double weight;
-private LocalDateTime creationDateTimePackage;
+private Instant creationDateTimePackage;
 
     public String getCityFrom() {
         return cityFrom;
@@ -20,7 +20,7 @@ private LocalDateTime creationDateTimePackage;
         return weight;
     }
 
-    public LocalDateTime getCreationDateTimePackage() {
+    public Instant getCreationDateTimePackage() {
         return creationDateTimePackage;
     }
 
@@ -38,7 +38,7 @@ private LocalDateTime creationDateTimePackage;
         this.cityFrom = cityFrom;
         this.cityTo = cityTo;
         this.weight = weight;
-        this.creationDateTimePackage = creationDateTimePackage;
+        this.creationDateTimePackage = Instant.from(creationDateTimePackage);
 
     }
 }
